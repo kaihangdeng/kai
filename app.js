@@ -6,10 +6,11 @@ const ejs = require("ejs");
 const app = express();
 // this my change
 
+/*
 const Doctor = require('./models/doctor');
 const Patient = require('./models/patient');
 const doctor = require('./models/doctor');
-const patient = require('./models/patient');
+const patient = require('./models/patient'); */
 
 let url = 'mongodb://localhost:27017/clinicDB';
 mongoose.connect(url, function (err) {
