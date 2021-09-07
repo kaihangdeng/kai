@@ -12,7 +12,7 @@ const Patient = require('./models/patient');
 const doctor = require('./models/doctor');
 const patient = require('./models/patient'); 
 
-let url = 'mongodb://localhost:27017/clinicDB';
+let url = 'mongodb://localhost:8080/clinicDB';
 mongoose.connect(url, function (err) {
     if (err) {
         console.log('Error in Mongoose connection');
