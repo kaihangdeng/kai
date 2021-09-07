@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    
+    <style>
+        a:link, a:visited {
+          background-color: rgb(161, 69, 131);
+          color: black;
+          border: 2px solid rgb(226, 16, 16);
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+        }
+        
+        a:hover, a:active {
+          background-color: rgb(212, 16, 16);
+          color: rgb(158, 73, 137);
+        }
+        </style>
+    
+    <div class="header">
+        <img src="monash.jpg" width="200" height="200" />
+        <h1> Welcome to FIT2095 Week 6 lab</h1>
+        <p>List of patients</p>
+    </div>
+    <div class="content">
+        <div>
+            <a href="/">Home</a>
+            <a href="/adddoctor">Add Doctor</a>
+            <a href="/addpatient">Add patient</a>
+            <a href="/listdoctor">List Doctors</a>
+            <a href="/listpatient">List Patients</a>
+            <a href="/updatedoctor">Upadate Doctor</a>
+            <a href="/deletepatient">Delete Patient</a>
+        </div>
+    </div>
+
+   
+
+    <div class="container-fluid">
+        <div class="row">
+            <table class="table">
+                <thead>
+        
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Doctor'ID</th>
+                    <th scope="col">Date of visit</th>
+                    <th scope="col">Description</th>
+                </thead>
+                <tbody>
+                <% for ( var i = 0; i < patient.length; i++){ %>
+                <tr>
+                    
+                    <td>
+                        <%= patient[i].name %>
+                    </td>
+                    <td>
+                        <%= patient[i].age %>
+                    </td>
+                    <td>
+                        <%= patient[i]._id %>
+                    </td>
+                    <td>
+                        <%= patient[i].dateOfVisit %>
+                    </td>
+                    <td>
+                        <%= patient[i].caseDescription %>
+                    </td>
+                </tr>
+                <% }%>
+                </tbody>
+            </table>
+        </div>
+    </div>
+   
+
+</body>
+</html>

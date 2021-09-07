@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    
+    <style>
+        a:link, a:visited {
+          background-color: rgb(167, 68, 134);
+          color: black;
+          border: 2px solid rgb(235, 13, 13);
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+        }
+        
+        a:hover, a:active {
+          background-color: rgb(233, 21, 32);
+          color: rgb(156, 64, 129);
+        }
+        </style>
+    
+    <div class="header">
+        <img src="monash.jpg" width="200" height="200" />
+        <h1> Welcome to FIT2095 Week 6 lab</h1>
+        <p>List of doctors</p>
+    </div>
+    <div class="content">
+        <div>
+            <a href="/">Home</a>
+            <a href="/adddoctor">Add Doctor</a>
+            <a href="/addpatient">Add patient</a>
+            <a href="/listdoctor">List Doctors</a>
+            <a href="/listpatient">List Patients</a>
+            <a href="/updatedoctor">Upadate Doctor</a>
+            <a href="/deletepatient">Delete Patient</a>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <th scope="col">Fitstname</th>
+                    <th scope="col">Lastname</th>
+                    <th scope="col">DoB</th>
+                    <th scope="col">State</th>
+                    <th scope="col">Suburb</th>
+                    <th scope="col">Street</th>
+                    <th scope="col">Unit</th>
+                    <th scope="col">#patient</th>
+                    <th scope="col">ID</th>
+                </thead>
+                <tbody>
+                <% for ( var i = 0; i < doctor.length; i++){ %>
+                <tr>
+                    <td>
+                        <%= doctor[i].firstName %>
+                    </td>
+                    <td>
+                        <%= doctor[i].lastName %>
+                    </td>
+                    <td>
+                        <%= doctor[i].dateOfBirth %>
+                    </td>
+                    <td>
+                        <%= doctor[i].state %>
+                    </td>
+                    <td>
+                        <%= doctor[i].suburb %>
+                    </td>
+                    <td>
+                        <%= doctor[i].street %>
+                    </td>
+                    <td>
+                        <%= doctor[i].unit %>
+                    </td>
+                    <td>
+                        <%= doctor[i].numOfPatients %>
+                    </td>
+                    <td>
+                        <%= doctor[i]._id %>
+                    </td>
+                </tr>
+                <% }%>
+                </tbody>
+            </table>
+        </div>
+    </div>
+   
+
+</body>
+</html>
